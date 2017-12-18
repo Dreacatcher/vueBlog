@@ -1,0 +1,30 @@
+@mixin screen-adapter($type:slim) {
+    @if $type==wide {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $type==slim {
+        @media screen and (min-width: 1000px) {
+            @content;
+        }
+    }
+}
+
+@mixin mypostcss($attr, $values:2) {
+    -webkit-#{$attr}: px2rem($values);
+    -moz-#{$attr}:  px2rem($values);
+    -o-#{$attr}:  px2rem($values);
+    $attr: px2rem($values);
+}
+
+@mixin border-radius($values) {
+    -webkit-border-radius: px2rem($values);
+    -moz-border-radius: px2rem($values);
+    border-radius: px2rem($values);
+}
+
+@mixin flex(){
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}

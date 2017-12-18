@@ -1,0 +1,19 @@
+@function px2rem($n,$size:1) {
+  @return ($n / $baseFontSize*$size)*1rem;
+}
+
+@function relative-size($rota){
+  @return $base-size * $rota
+}
+@function img-url($img, $path:''){
+  @if($path != ''){
+  	@return url(#{$path}/#{$img}?t=#{$cvs})
+  }
+  @else{
+  	@return url(#{$imgUrl}/#{$img}?t=#{$cvs})
+  }
+}
+
+
+
+

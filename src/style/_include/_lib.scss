@@ -1,0 +1,70 @@
+/* 常用样式缩写 */
+/* float */
+@each $name, $value in (l: left, r: right) {
+    .Lfl#{$name} { float: $value }
+}
+@each $name, $value in (l: left, r: right, b: both) {
+    .Lcf#{$name} { clear: $value }
+}
+@for $i from 5 through 10 {
+  .Lfz#{$i * 2} { font-size: 2px * $i; }
+}
+/* color */
+@each $name, $value in (fff: #FFF, f60: #F60, c00: #C00, f00: #F00, 390: #390, 333: #333, 666: #666, 999: #999) {
+    .Lc#{$name} {color: $value }
+}
+/* text-align */
+@each $name, $value in (l: left, c: center, r: right) {
+    .Lta#{$name} { text-align: $value }
+}
+.Lfwb { font-weight:bold; }
+
+/* font-family */
+.Lffar { font-family:Arial; }
+.Lfftm { font-family:Tahoma; }
+.Lffst { font-family:\5B8B\4F53; }
+.Lffyh { font-family:\5FAE\8F6F\96C5\9ED1; }
+/* text-indent */
+@for $i from 1 through 8 {
+  .Lti#{$i * 5} { text-indent: 5px * $i; }
+}
+/* margin and padding */
+@for $i from 1 through 8 {
+  .Lmt#{$i * 5} { margin-top: 5px * $i; }
+  .Lmr#{$i * 5} { margin-right: 5px * $i; }
+  .Lmb#{$i * 5} { margin-bottom: 5px * $i; }
+  .Lml#{$i * 5} { margin-left: 5px * $i; }
+  .Lpt#{$i * 5} { padding-top: 5px * $i; }
+  .Lpr#{$i * 5} { padding-right: 5px * $i; }
+  .Lpb#{$i * 5} { padding-bottom: 5px * $i; }
+  .Lpl#{$i * 5} { padding-left: 5px * $i; }
+}
+/* position */
+@each $name, $value in (a: absolute, r: relative, f: fixed, s: static) {
+  .Lpos#{$name} { position: $value }
+}
+/* display */
+.Ldb { display:block; }
+.Ldn { display:none; }
+.Ldib { display:inline-block; }
+/* overflow */
+.Lovh { overflow:hidden; }
+.Lovv { overflow:visible; }
+/* visibility */
+.Lvv { visibility:visible; }
+.Lvh { visibility:hidden; }
+/* background-color */
+@each $name, $value in (r: red, w: white, b: blue, g: green, o: orange, y: yellow) {
+  .Lbgc#{$name} { background-color: $value }
+}
+/* other */
+.Lon { outline:none; }
+.Lcurp { cursor:pointer; }
+
+.Lcfx {
+  zoom: 1;
+  &:before, &:after { content:""; display:table; }
+  &:after { clear:both }
+}
+.Lmlra { margin-left: auto; margin-right: auto }
+/* vim: se sw=2 ts=2 sts=2 et fdm=marker: */

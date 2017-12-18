@@ -1,0 +1,141 @@
+/*
+* @Author: lcm
+* @Date:   2017-05-22 18:19:07
+ * @Last Modified by: lucm
+ * @Last Modified time: 2017-11-29 11:40:00
+*/
+@import '../../style/_include/_all';
+.mainHead {
+  overflow: hidden;
+  clear: both;
+  width: 100%;
+  color: white;
+  background: linear-gradient(
+    rgba(66, 145, 212, 1),
+    rgba(131, 184, 228, 0.5)
+  );
+  .active {
+    background: $deepPurple;
+  }
+  .nav,
+  .navCont,
+  .navSubCont {
+    display: block;
+    margin-top: -5px;
+  }
+  .nav {
+  }
+  .topLeft {
+    display: inline-block;
+    width: 70%;
+    overflow: hidden;
+    clear: both;
+    font-size: 14px;
+    .topLogo {
+      display: inline-block;
+      float: left;
+      overflow: hidden;
+      width: 20%;
+      img {
+        width: 100px;
+        height: 80px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      span {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 26px;
+        margin-left: 30px;
+        font-weight: normal;
+      }
+    }
+    .endNav{
+      height: 80px;
+      float: left;
+      line-height: 80px;
+      padding-left: 20px;
+      font-size: 18px;
+    }
+    .topNav {
+      padding-left: 10px;
+      display: inline-block;
+      float: left;
+      .mainNav {
+        cursor: pointer;
+        .info {
+          font-weight: normal;
+          font-size: 26px;
+        }
+      }
+      .active {
+        background: $deepPurple;
+      }
+      span {
+        font-weight: normal;
+        font-size: 14px;
+      }
+      .mainNav {
+        cursor: pointer;
+        padding: 0 5px 0 5px;
+        height: 80px;
+        line-height: 80px;
+        display: inline-block;
+      }
+      .mainNav {
+        .topSubNavTt {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .topRight {
+    display: inline-block;
+    float: right;
+    width: 30%;
+    height: 80px;
+    line-height: 80px;
+    vertical-align: middle;
+    clear: both;
+    overflow: hidden;
+    a {
+      float: right;
+      padding-left: 10px;
+    }
+  }
+  .navCont,
+  .navSubCont {
+    background: $deepPurple;
+    ul {
+      // display: flex;
+      // flex-wrap: nowrap;
+      // align-items: center;
+      // box-sizing: border-box;
+      clear: both;
+      overflow: hidden;
+      li {
+        padding: 0 10px 0 10px;
+        height: 55px;
+        line-height: 55px;
+        max-height: 160px;
+        float: left;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        span {
+          vertical-align: middle;
+          justify-content: center;
+          align-content: center;
+        }
+        &:hover {
+          background: rgba(66, 145, 212, 1);
+        }
+      }
+      .listActive {
+        background: rgba(66, 145, 212, 1);
+      }
+    }
+  }
+}
