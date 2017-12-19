@@ -50,9 +50,9 @@ export default {
   margin: 0 auto;
   header {
     max-width: 1200px;
+    padding: px2rem(20);
     margin: 0 auto;
     height: auto;
-    width: 100%;
     margin: 0 auto;
     background: $pageBgc;
     .headerWp {
@@ -91,6 +91,7 @@ export default {
         .navWp {
           width: 100%;
           display: flex;
+          padding: 0 px2rem(5);
           font-size: px2rem(16);
           li {
             width: 30%;
@@ -122,6 +123,7 @@ export default {
       .navWpMain2 {
         .navWp {
           width: 100%;
+          padding: 0 px2rem(5);
           display: flex;
           font-size: px2rem(16);
           li {
