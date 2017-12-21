@@ -111,7 +111,7 @@ export default {
       }
       .headerWp{
         h2 {
-          font-size: px2rem(14);
+          font-size: px2rem(20);
           color: $fontColor;
           text-align: left;
           padding-left: px2rem(10);

@@ -44,14 +44,15 @@
     var scale = 1 / devicePixelRatio;
     document.querySelector('meta[name="viewport"]').setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
     var deviceWidth = document.documentElement.clientWidth;
-    if(deviceWidth>1200){
-      deviceWidth = 740
-    }else if(deviceWidth<1200&&deviceWidth>640){
-      deviceWidth =440
-    }else if(deviceWidth<2000&&deviceWidth>1200){
-      deviceWidth =200
-    }else if(deviceWidth<640&&deviceWidth>320){
+    // if(deviceWidth>1200){
+    //   deviceWidth = 740
+    // }else if(deviceWidth<2000&&deviceWidth>1200){
+    //   deviceWidth =200
+    // }
+    if(deviceWidth<640&&deviceWidth>320){
       deviceWidth =680
+    }else if(deviceWidth>640){
+      deviceWidth =440
     }
     if (devicePixelRatio == 2 && deviceWidth == 980) {
       document.querySelector('meta[name="viewport"]').setAttribute('content', 'initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no');

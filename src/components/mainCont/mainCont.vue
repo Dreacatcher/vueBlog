@@ -32,18 +32,18 @@
                   <span class="info">前端码农</span>
                 </li>
                 <li class="tagWp">
-                  <p class="tag">
-                    <b>1000</b>
-                    <span>日志</span>
-                  </p>
-                   <p>
-                    <b>33</b>
-                    <span>标签</span>
-                  </p>
-                   <p>
-                    <b>1000</b>
-                    <span>浏览量</span>
-                  </p>
+                    <p class="tag">
+                      <b>1000</b>
+                      <span>日志</span>
+                    </p>
+                    <p>
+                      <b>33</b>
+                      <span>标签</span>
+                    </p>
+                    <p>
+                      <b>1000</b>
+                      <span>浏览量</span>
+                    </p>
                   </li>
               </ul>
               <ul class="contactTagWp">
@@ -73,6 +73,11 @@
         </div>
       </el-col>
     </el-row>
+    <el-pagination
+      background
+      layout="prev, pager, next"
+      :total="1000">
+    </el-pagination>
   </section>
 </template>
 
@@ -161,6 +166,9 @@ export default {
       p {
         width: 100%;
         border-right: 1px solid $mainBgb;
+        b{
+          display: block;
+        }
       }
       p:last-child {
         border-right: none;
