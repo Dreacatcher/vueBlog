@@ -6,6 +6,11 @@
         <Head></Head>
       </header>
       <MainCont></MainCont>
+      <transition>
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
+      </transition>
     </section>
 	</div>
 </template>
@@ -17,7 +22,15 @@ export default {
   name: 'app',
   data: function() {
     return {
-      show: true
+      show: true,
+      ishome: true
+    }
+  },
+  created() {
+    if (this.$route.path === '/') {
+      this.ishome = true
+    } else {
+      this.ishome = false
     }
   },
   methods: {},
@@ -41,12 +54,12 @@ export default {
     }
   }
   @media only screen and (max-device-width: 500px) {
-    .mainWp{
-      .el-col-18{
+    .mainWp {
+      .el-col-18 {
         width: 90%;
         margin-left: 5%;
       }
-      .el-col-6{
+      .el-col-6 {
         display: none;
       }
     }

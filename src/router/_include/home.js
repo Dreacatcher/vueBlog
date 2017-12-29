@@ -2,14 +2,19 @@
  * @Author: lucm
  * @Date: 2017-12-12 16:19:58
  * @Last Modified by: lucm
- * @Last Modified time: 2017-12-12 16:21:56
+ * @Last Modified time: 2017-12-29 17:19:58
  */
 import Index from 'index'
+import ArticleDetail from 'detail'
 export default [
   {
     path: '/',
     name: 'Index',
-    component: Index
+    component: Index,
+    children: [{
+      path: '/articleDetail',
+      component: ArticleDetail
+    }]
   }
 ]
 
