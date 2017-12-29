@@ -14,7 +14,7 @@
                   </p>
                   <p class="cont">Webstorm SettingWebstorm SettingWebstorm SettingWebstorm SettingWebstorm SettingWebstorm SettingWebstorm SettingWebstorm SettingWebstorm SettingWebstorm SettingWebstorm Setting ...</p>
          
-                  <a class="articleLink" href="" @click="handleClick(22222)">阅读全文{{o}} >></a>
+                  <p class="articleLink"  @click="handleClick(22222)">阅读全文{{o}} ></p>
                 </li>
               </ul>
             </div>

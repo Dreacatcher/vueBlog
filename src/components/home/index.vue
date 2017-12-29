@@ -5,8 +5,8 @@
       <header>
         <Head></Head>
       </header>
-      <MainCont></MainCont>
-      <transition>
+      <MainCont v-if="ishome"></MainCont>
+      <transition v-if="!ishome">
         <keep-alive>
           <router-view></router-view>
         </keep-alive>
@@ -23,15 +23,18 @@ export default {
   data: function() {
     return {
       show: true,
-      ishome: true
+      ishome: false
     }
   },
-  created() {
-    if (this.$route.path === '/') {
-      this.ishome = true
-    } else {
-      this.ishome = false
-    }
+  created() {},
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      if (to.path === '/') {
+        vm.ishome = true
+      } else {
+        vm.ishome = false
+      }
+    })
   },
   methods: {},
   components: {
